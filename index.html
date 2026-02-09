@@ -1,46 +1,58 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>MiniSuper - Catálogo</title>
-  <link rel="stylesheet" href="stysles.css">
+  <meta charset="UTF-8">
+  <title>ShopMaster | Dashboard</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <h1>MiniSuper 🛒</h1>
-    <p class="subtitle">Catálogo de productos</p>
+
+<div class="dashboard">
+
+  <header class="top-bar">
+    <input type="text" id="searchInput" placeholder="Buscar producto...">
+    <button id="searchBtn">Buscar</button>
+    <a href="nuevo.html" class="btn-primary">Nuevo Producto</a>
   </header>
 
-  <main id="app">
-    <!-- Vista catálogo -->
-    <section id="catalog" class="view">
-      <div class="controls">
-        <input id="search" placeholder="Buscar por nombre..." />
-        <button id="search-btn" class="btn">Buscar</button>
-      </div>
-      <div id="product-grid" class="grid"></div>
-    </section>
+  <section class="filters">
+    <select id="categorySelect">
+      <option value="">Todas las categorías</option>
+    </select>
 
-    <!-- Vista detalle (oculta hasta que se seleccione un producto) -->
-    <section id="detail" class="view hidden">
-      <button id="back" class="btn back">← Regresar</button>
-      <div class="detail-card">
-        <img id="detail-img" alt="producto"/>
-        <div class="detail-info">
-          <h2 id="detail-title"></h2>
-          <p id="detail-brand" class="muted"></p>
-          <p id="detail-price" class="price"></p>
-          <p id="detail-description"></p>
-          <p id="detail-extra" class="muted"></p>
-          <p id="detail-opinions"></p>
-        </div>
-      </div>
-    </section>
+    <select id="sortSelect">
+      <option value="">Ordenar</option>
+      <option value="title-asc">Título A-Z</option>
+      <option value="title-desc">Título Z-A</option>
+      <option value="price-asc">Precio ↑</option>
+      <option value="price-desc">Precio ↓</option>
+    </select>
+  </section>
+
+  <main>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Foto</th>
+          <th>Título</th>
+          <th>Precio</th>
+          <th>Categoría</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="productsTable"></tbody>
+    </table>
   </main>
 
-  <footer class="site-footer">Datos proveídos por <a href="https://dummyjson.com/products" target="_blank">dummyjson.com</a></footer>
+  <footer class="pagination">
+    <button id="prevBtn">Anterior</button>
+    <span id="pageInfo"></span>
+    <button id="nextBtn">Siguiente</button>
+  </footer>
 
-  <script src="main.js"></script>
+</div>
+
+<script src="js/main.js"></script>
 </body>
 </html>
