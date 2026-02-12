@@ -2,31 +2,59 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Portafolio GitHub | Uriel Cruz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uriel Cruz Hernandez - Portafolio Dev</title>
+    
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+   
+    <header class="profile-section">
+        <a href="../index.html">Volver al inicio</a>
+        <div class="container">
+            <div class="profile-content">
+                <div class="avatar-wrapper">
+                    <img id="avatar" src="" alt="Profile Picture" class="avatar">
+                </div>
+                <div class="profile-info">
+                    <h1 id="name" class="name">Cargando...</h1>
+                    <p id="bio" class="bio"></p>
+                    <div class="meta">
+                        <span id="location" class="location"></span>
+                        <span id="followers-count" class="followers-count"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
-<header class="profile">
-    <h1>💻 Portafolio GitHub</h1>
-    <p>Repositorios cargados dinámicamente desde GitHub API</p>
-</header>
+    
+    <main class="projects-section">
+        <div class="container">
+            <h2 class="section-title">Proyectos Recientes</h2>
+            <div id="projects-grid" class="projects-grid">
+                <!-- Los proyectos se cargarán aquí dinámicamente -->
+            </div>
+        </div>
+    </main>
 
-<section class="projects">
-    <h2>📦 Todos mis repositorios</h2>
-    <div id="repoList" class="repo-grid"></div>
-</section>
+    
+    <aside class="community-section">
+        <div class="container">
+            <h3 class="section-title-small">Comunidad</h3>
+            <div id="followers-list" class="followers-list">
+                
+            </div>
+        </div>
+    </aside>
 
-<section class="recent">
-    <h2>🔥 Actividad más reciente</h2>
-    <div id="recentRepo"></div>
-</section>
+    
+    <footer class="footer">
+        <div class="container">
+            <p>Portafolio actualizado automáticamente desde GitHub</p>
+        </div>
+    </footer>
 
-<footer>
-    <p>GitHub Pages + GitHub API</p>
-</footer>
-
-<script src="app.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
-
